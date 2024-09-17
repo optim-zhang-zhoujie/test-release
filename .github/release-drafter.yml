@@ -35,23 +35,3 @@ version-resolver:
 template: |
   ## Changes
   $CHANGES
-
-autolabeler:
-  - label: enhancement
-    branch:
-      - "/^(f|F)eat(ure)?[/-].+/"
-  - label: bug
-    branch:
-      - "/^(f|F)ix[/-].+/"
-  - label: emergency
-    branch:
-      - "/^(h|H)otfix[/-].+/"
-  - label: test
-    branch:
-      - "/^(t|T)est[/-].+/"
-  - label: refactor
-    branch:
-      - "/^(r|R)efactor[/-].+/"
-  - label: documentation
-    branch:
-      - "/^(d|D)oc(s)?[/-].+/"
