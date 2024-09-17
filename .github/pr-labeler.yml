@@ -1,3 +1,7 @@
-feature: ["feature/*", "feat/*"]
-fix: "fix/*"
+enhancement: ["feature/*", "feat/*"]
+bug: "fix/*"
+emergency: "hotfix/*"
+test: "test/*"
+refactor: "refactor/*"
+documentation: "docs/*"
 chore: "chore/*"
