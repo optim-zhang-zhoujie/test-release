@@ -39,19 +39,19 @@ template: |
 autolabeler:
   - label: enhancement
     branch:
-      - "/^feat(ure)?[/-].+/"
+      - "/^(f|F)eat(ure)?[/-].+/"
   - label: bug
     branch:
-      - "/^fix[/-].+/"
+      - "/^(f|F)ix[/-].+/"
   - label: emergency
     branch:
-      - "/^hotfix[/-].+/"
+      - "/^(h|H)otfix[/-].+/"
   - label: test
     branch:
-      - "/^test[/-].+/"
+      - "/^(t|T)est[/-].+/"
   - label: refactor
     branch:
-      - "/^refactor[/-].+/"
+      - "/^(r|R)efactor[/-].+/"
   - label: documentation
     branch:
-      - "/^doc(s)?[/-].+/"
+      - "/^(d|D)oc(s)?[/-].+/"
