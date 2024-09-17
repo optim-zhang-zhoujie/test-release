@@ -16,7 +16,7 @@ jobs:
       # write permission is required to create a github release
       contents: write
       pull-requests: write
-    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release')
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.title, 'v')
     runs-on: ubuntu-latest
     steps:
       - name: Create Release Tag And Note
