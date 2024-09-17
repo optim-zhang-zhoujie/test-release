@@ -6,6 +6,7 @@ on:
       - closed
     branches:
       - main
+      - develop
 
 permissions:
   contents: read
@@ -16,7 +17,6 @@ jobs:
       # write permission is required to create a github release
       contents: write
       pull-requests: write
-    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.title, 'v')
     runs-on: ubuntu-latest
     steps:
       - name: Create Release Tag And Note
@@ -28,4 +28,4 @@ jobs:
           tag: ${{ env.RELEASE_TAG }}
           name: Release ${{ env.RELEASE_TAG }}
           version: ${{ env.RELEASE_TAG }}
-          publish: true
+          publish: ${{ startsWith(github.event.pull_request.title, 'v') }}
